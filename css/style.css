@@ -1,21 +1,35 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 97vw;
-}
-.cell{
-    border: solid black 2px;
-    height: 20px;
-    width: 20px;
-}
-.grid{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
 
+
+.wrapper{
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: darkslateblue;
 }
-.snake{
+.game_details{
+    color: wheat;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+.play_board{
+    display: grid;
+    grid-template: repeat(30,1fr) / repeat(30,1fr);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.play_board .food{
     background-color: red;
+    border-radius: 50%;
+}
+.play_board .head{
+    background-color: blueviolet;
+}
+.play_board :nth-child(2){
+    border-radius: 30%;
 }
